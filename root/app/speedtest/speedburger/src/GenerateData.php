@@ -14,6 +14,7 @@ class GenerateData implements GenerateDataInterface
   public $chunkSize;
   public $chunkToSend;
   public $dataSize;
+  private $randStream;
 
   /* 1 Byte = 8 Bit 1 Kilobyte = 1,024 Bytes
      1 Megabyte = 1,048,576 Bytes 1 Gigabyte = 1,073,741,824 Bytes */
@@ -77,9 +78,22 @@ class GenerateData implements GenerateDataInterface
 
   public function streamChunk($bytes)
   {
-    /* if rndbytes no exist regex match this output "which: no rndbytes in"
-    then use openssl_random_pseudo_bytes to gen random bytes*/ 
-
+    /* if rndbytes no exist then use
+    openssl_random_pseudo_bytes to gen random bytes */
+    system('which rndbytes', $which);
+    if($which === 1)
+    {
+      $this->randStream = openssl_random_pseudo_bytes($this->chunkSize);
+    }
+    // elseif($which === 0)
+    // {
+    //   pcntl_exec()
+    // }
+    for($i=0; $i < $this->chunkToSend; $i++)
+    {
+      echo $this->randStream;
+      flush();
+    }
   }
 
 
