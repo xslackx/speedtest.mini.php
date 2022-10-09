@@ -14,10 +14,10 @@ interface GenerateDataInterface
    * The values ​​in bytes are determined from the size
    * of the object of the $_GET method requested by the client,
    * then the bytes that must be returned to the client are calculated
-   * @return string[] An array of integer values ​​containing the amount of data
+   * @return array[] An array of integer values ​​containing the amount of data
    * to send and create the data segments
    */
-   public function bytesChunk($data);
+   public function bytesChunk();
 
    /**
     * When we receive the array returned by the bytesChunk() method,
