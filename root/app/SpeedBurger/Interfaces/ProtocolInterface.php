@@ -1,2 +1,2 @@
 <?php
-namespace SpeedBurger\Interfaces\ProtocolInterface;
+namespace SpeedBurger\Interfaces;

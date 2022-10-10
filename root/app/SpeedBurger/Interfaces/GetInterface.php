@@ -1,2 +1,2 @@
 <?php
-namespace SpeedBurger\Interfaces\GetInterface;
+namespace SpeedBurger\Interfaces;

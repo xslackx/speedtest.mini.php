@@ -1,2 +1,2 @@
 <?php
-namespace SpeedBurger\Controllers\SpeedTrafFactory;
+namespace SpeedBurger\Controllers;

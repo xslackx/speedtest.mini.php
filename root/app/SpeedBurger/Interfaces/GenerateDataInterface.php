@@ -1,5 +1,5 @@
 <?php
-namespace SpeedBurger\Interfaces\GenerateDataInterface;
+namespace SpeedBurger\Interfaces;
 
 /**
  * To create the random data, the values ​​in bytes

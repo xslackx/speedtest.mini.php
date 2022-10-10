@@ -1,2 +1,2 @@
 <?php
-namespace SpeedBurger\Interfaces\PostInterface;
+namespace SpeedBurger\Interfaces;

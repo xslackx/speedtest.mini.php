@@ -1,2 +1,2 @@
 <?php
-namespace SpeedBurger\Interfaces\SpeedTrafInterface;
+namespace SpeedBurger\Interfaces;

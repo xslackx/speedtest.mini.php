@@ -7,5 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
-    'SpeedBurger\\' => array(dirname(__DIR__, 2) . '/SpeedBurger/')
+    'SpeedBurger\\' => array(dirname(__DIR__, 2) . '/SpeedBurger/'),
 );

@@ -1,2 +1,2 @@
 <?php
-namespace SpeedBurger\Models\SpeedTraf;
+namespace SpeedBurger\Models;
