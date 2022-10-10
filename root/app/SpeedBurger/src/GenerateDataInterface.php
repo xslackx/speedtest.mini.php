@@ -1,4 +1,5 @@
 <?php
+namespace SpeedBurger\src\GenerateDataInterface;
 
 /**
  * To create the random data, the values ​​in bytes
@@ -26,8 +27,9 @@ interface GenerateDataInterface
     * does not have it installed, the openssl_random_pseudo_bytes
     * function will be used and the data will be returned to the client.
     * @see https://linux.die.net/man/1/rndbytes
+    * @see https://sourceforge.net/projects/dktools/files/dktools/dktools-4.34.1/
     * @see https://www.php.net/manual/en/function.openssl-random-pseudo-bytes.php
     * @return string Returns segmented data
     */
-    public function streamChunk($bytes);
+    public function streamChunk();
 }

@@ -1,5 +1,7 @@
 <?php
+namespace SpeedBurger\src\GenerateData;
 
+use SpeedBurger\src\GenerateDataInterface;
 /**
  * This class implements the Interface GenerateData
  * @see https://github.com/adolfintel/speedtest/blob/master/garbage.php
@@ -14,6 +16,7 @@ class GenerateData implements GenerateDataInterface
   public $chunkSize;
   public $chunkToSend;
   public $dataSize;
+  public $randAlg;
   private $randStream;
 
   /* 1 Byte = 8 Bit 1 Kilobyte = 1,024 Bytes
@@ -59,6 +62,11 @@ class GenerateData implements GenerateDataInterface
       $this->chunkSize = 1024 * 1024;
     }
 
+    if(empty($data['alg']))
+    {
+      $this->randAlg = 'openssl';
+    }
+
   }
 
   public function bytesChunk()
@@ -76,7 +84,7 @@ class GenerateData implements GenerateDataInterface
     $this->chunkSize, $this->chunkToSend);
   }
 
-  public function streamChunk($bytes)
+  public function streamChunk()
   {
     /* if rndbytes no exist then use
     openssl_random_pseudo_bytes to gen random bytes */
@@ -85,13 +93,14 @@ class GenerateData implements GenerateDataInterface
     {
       $this->randStream = openssl_random_pseudo_bytes($this->chunkSize);
     }
-    // elseif($which === 0)
-    // {
-    //   pcntl_exec()
-    // }
+    elseif($which === 0)
+    {
+      // pcntl_exec();
+      return "need to implement";
+    }
     for($i=0; $i < $this->chunkToSend; $i++)
     {
-      echo $this->randStream;
+      return $this->randStream;
       flush();
     }
   }
