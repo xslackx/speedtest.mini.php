@@ -1,7 +1,7 @@
 <?php
 namespace SpeedBurger\Models\GenerateData;
 
-use SpeedBurger\Interfaces\GenerateDataInterface;
+use \SpeedBurger\Interfaces\GenerateDataInterface;
 /**
  * This class implements the Interface GenerateData
  * @see https://github.com/adolfintel/speedtest/blob/master/garbage.php
