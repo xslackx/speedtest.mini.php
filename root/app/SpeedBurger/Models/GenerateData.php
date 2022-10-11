@@ -4,6 +4,7 @@ namespace SpeedBurger\Models;
 require_once dirname(__DIR__, 2) . '/vendor/autoload.php';
 
 use SpeedBurger\Interfaces\GenerateDataInterface;
+
 /**
  * This class implements the Interface GenerateData
  * @see https://github.com/adolfintel/speedtest/blob/master/garbage.php
