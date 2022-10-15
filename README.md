@@ -1,7 +1,9 @@
-# speedtest.php
+# SpeedBurger
 Speedtest.net mini/legacy-http light server. Works with [speedtest-cli](https://github.com/sivel/speedtest-cli)
 
-In mid-2017, speedtest.net (Ookla) decided to shut down their speedtest mini project. 
+In mid-2017, speedtest.net (Ookla) decided to shut down their speedtest mini project.
+
+In 2022 in the search for some software that could be used for end-to-end testing, I found the repository from the https://github.com/ipburger/speedtest.mini.php project and since then I have made some changes, such as using OOP, PSRs and future migration to php8
 
 This repo is an attempt at creating our own speedtest-mini server, and use [speedtest-cli](https://github.com/sivel/speedtest-cli) with it.
 
